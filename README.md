@@ -105,6 +105,38 @@ Environment is the “world” in which the agent interacts, such as a park.
 Actions are performed by the agent in the environment, such as running around, sitting, or playing ball.
 Rewards are issued to the agent for performing good actions.
 
+AWS DeepRacer offers two training algorithms:
+
+Proximal Policy Optimization (PPO)
+Soft Actor Critic (SAC)
+
+------
+- Deterministic policy
+- Stochastic policy
+
+A policy defines the action that the agent should take for a given state. This could conceptually be represented as a table - given a particular state, perform this action.
+
+This is called a deterministic policy, where there is a direct relationship between state and action. This is often used when the agent has a full understanding of the environment and, given a state, always performs the same action.
+
+Consider the classic game of rock, paper, scissors. An example of a deterministic policy is always playing rock. Eventually the other players are going to realize that you are always playing rock and then adapt their strategy to win, most likely by always playing paper. So in this situation it’s not optimal to use a deterministic policy.
+
+So, we can alternatively use a stochastic policy. In a stochastic policy you have a range of possible actions for a state, each with a probability of being selected. When the policy is queried to return an action for a state it selects one of these actions based on the probability distribution.
+
+This would obviously be a much better policy option for our rock, paper, scissors game as our opponents will no longer know exactly which action we will choose each time we play.
 
 
+-----
 
+Value function
+- This is used to determine possible future rewards from being in a certain state
+
+Policy update
+- This is generally the process of selecting the preferred actions, by querying the policy given a certain state
+
+--------------------
+
+Difference between PPO and SAC Policy
+
+PPO uses “on-policy” learning. This means it learns only from observations made by the current policy exploring the environment - using the most recent and relevant data. Say you are learning to drive a car, on-policy learning would be analogous to you reviewing a video of your most recent lesson and taking note of what you did well, and what needs improvement.
+
+In contrast, SAC uses “off-policy” learning. This means it can use observations made from previous policies exploration of the environment - so it can also use old data. Going back to our learning to drive analogy, this would involve reviewing videos of your driving lessons from the last few weeks. 

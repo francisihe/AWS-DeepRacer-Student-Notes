@@ -140,3 +140,22 @@ Difference between PPO and SAC Policy
 PPO uses “on-policy” learning. This means it learns only from observations made by the current policy exploring the environment - using the most recent and relevant data. Say you are learning to drive a car, on-policy learning would be analogous to you reviewing a video of your most recent lesson and taking note of what you did well, and what needs improvement.
 
 In contrast, SAC uses “off-policy” learning. This means it can use observations made from previous policies exploration of the environment - so it can also use old data. Going back to our learning to drive analogy, this would involve reviewing videos of your driving lessons from the last few weeks. 
+
+--------------------
+
+Machine Learning Inference
+- this refers to how a device uses the trained model loaded onto it to make decisions. It involves running input data through a machine learning model which then outputs its prediction
+
+We can measure the performance of inference with two metrics:
+
+The "inference rate" which is the number of inferences which can be done per second; and
+The "inference time" or "inference latency" which is time taken to run a single inference.
+
+---------------
+
+we want to maximize the rate of inference and therefore the number of decisions made every second. However, the rate of inference is dependent on many factors. The most obvious is the performance of the machine running the inference, such as the CPU (Central Processing Unit) speed, whether any GPU (Graphical Processing Unit) acceleration is present, and the amount of system RAM (Random Access Memory) available.
+
+There are also other factors. One is the machine learning framework used for training. There are many different frameworks available, such as TensorFlow, PyTorch, and Apache MXNet. These frameworks provide the tools and services to build machine learning models, including the training algorithms such as PPO (Proximal Policy Optimization) and SAC (Soft Actor Critic)
+
+
+

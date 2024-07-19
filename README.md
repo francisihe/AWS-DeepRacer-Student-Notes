@@ -94,3 +94,17 @@ Machine learning using Python libraries
 For more classical models (linear, tree-based) as well as a set of common ML-related tools, take a look at scikit-learn. The web documentation for this library is also organized for those getting familiar with space and can be a great place to get familiar with some extremely useful tools and techniques.
 For deep learning, mxnet, tensorflow, and pytorch are the three most common libraries. For the purposes of the majority of machine learning needs, each of these is feature-paired and equivalent.
 
+=========================
+
+Reinforcement Learning
+
+Reinforcement learning consists of several key concepts:
+
+Agent is the entity being trained. In our example, this is a dog.
+Environment is the “world” in which the agent interacts, such as a park.
+Actions are performed by the agent in the environment, such as running around, sitting, or playing ball.
+Rewards are issued to the agent for performing good actions.
+
+
+
+
